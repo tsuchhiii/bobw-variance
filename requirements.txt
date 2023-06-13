@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+seaborn
+tqdm
+ipdb
+# torch  # <- only required for fixed-budget project
+# cvxopt #  <- only for asymptotically optimal algorithms
