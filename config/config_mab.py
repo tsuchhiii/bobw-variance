@@ -1,42 +1,15 @@
 """ Configuration file for multi-armed bandit code
-This file includes a fundamental setting used in experiments.
 """
 
 '''
 Algorithm choices
 '''
 ALGO_CHOICES = [
-    # 'UCB1',
+    'UCB1',
     'TS',
-    # 'DMED',
-    # 'MedAdv',
-    # 'AOPS',
-    # 'EG-0.1',
-    # =====
     'TsallisINF-IW',
     'TsallisINF-RV',
-    # 'TsallisINFapprox-IW',
-    # ====
-    'TsallisINF-CS',
-    # 'TsallisINFOpt-IW',
-    # 'TsallisINFOpt-RV',
-    # 'TsallisINFOpt-CS',
-    # 'TsallisINFopt-RV',
-    # =====
-    # 'LogBarrierINF-V',
-    # 'LogBarrierINF-Dist',
-    # =====
-    ###
-    # sub-sampling
-    ###
-    # 'Greedy',
-    # # 'SS-Greedy',
-    # # 'SS-UCB1',
-    # 'SS-Greedy',
-    # 'SS-TS',
-    # # 'ManyTS',
-    # 'SS-TsallisINF-IW',
-    'MedAdv',
+    'LogBarrierINF-V',
 ]
 
 '''

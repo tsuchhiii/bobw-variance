@@ -1,9 +1,9 @@
 ## Further Adaptive Best-of-Both-Worlds Algorithm for Combinatorial Semi-Bandits
-Public code for a paper
+Public code for the paper
 ["Further Adaptive Best-of-Both-Worlds Algorithm for Combinatorial Semi-Bandits"](https://proceedings.mlr.press/v206/tsuchiya23a.html) in AISTATS2023.
 All algorithms included are the followings:
 ```
-- CombUCB1  (Kveton+ 2015)
+- CombUCB1 (Kveton+ 2015)
 - Thompson sampling (for multiple selection) (Wang and Chen 2018)
 - HYBRID (Zimmert+ 2018)
 - LBINF (Ito 2021)
@@ -18,21 +18,21 @@ The following provides three ways for constructing the environment.
 (1). If you use `pyenv`, just run `setup.sh` (it uses venv and automatically install the required packages) 
 To setup the environment, use `Python 3.7` or a more up-to-date version.
 ```
-bash setup.sh
-source venv/bin/activate
+$ bash setup.sh
+$ source venv/bin/activate
 ```
 
 (2) If you are using `conda` environment:
 ``` 
-conda create -n bandit python=3.8
-conda activate bandit
-pip install -r requirements.txt
-mkdir -p results/pe-mab/fig
+$ conda create -n bandit python=3.8
+$ conda activate bandit
+$ pip install -r requirements.txt
+$ mkdir -p results/multiple/fig
 ```
 
 Then, run
-```bash
-pip install -r requirements.txt 
+```
+$ pip install -r requirements.txt 
 ```
 
 (3) Otherwise, install the following packages with `Python 3.n (n >= 7)` environment.
@@ -47,17 +47,17 @@ pip install -r requirements.txt
 For (2) and (3), for generating the required directory for replicating the results, need to run the following:
 
 ```
-mkdir -p results/multiple/fig
+$ mkdir -p results/multiple/fig
 ```
 
 One can setup what algorithms to use in `config/config_multiple.py`
 
 
-### How to Run (by shell script)
+### How to Run (Using Shell Scripts)
 ```
-$ bash run_multiple.py {number of base-arms}
+$ bash run_multiple.sh {number of base-arms}
 
-$ bash run_multiple.py 5     # synthetic data
+$ bash run_multiple.sh 5     # synthetic data
 $ bash run_multiple_realdata.sh    # real data
 
 # and then plot 
@@ -67,7 +67,7 @@ $ bash plot_multiple_aistats.sh
 $ mkdir -p results/multiple/fig
 ```
 
-### How to Run (run LBINF-V (proposed algorithm) and CombUCB1)
+### How to Run (Using Python directly, here we run LBINF-V (proposed algorithm) and CombUCB1)
 ```
 $ python algorithms/multiple_play/test_multiple.py -ho {number of horizon} -na {number of actions} -nt {number of top arms (= number of maximum chosen arm)} -a {algorithm name} -ad {arm distribution} -s {setting} 
 
